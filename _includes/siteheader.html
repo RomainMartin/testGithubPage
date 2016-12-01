@@ -1,0 +1,9 @@
+<header>
+
+  {% for item in site.data.mainnav%}
+    {% if forloop.first %} <ul> {% endif %}
+      <li><a href="{{item.nav_url}}">{{item.nav_label}}</a></li>
+    {%if forloop.last %} </ul> {% endif %}
+  {% endfor%}
+
+</header>

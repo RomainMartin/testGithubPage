@@ -1,0 +1,11 @@
+- nav_label: Home
+  nav_url: /
+  nav_current: Home
+
+- nav_label: Blog
+  nav_url: /blog/
+  nav_current: blog
+
+- nav_label: Portfolio
+  nav_url: /work/
+  nav_current: portfolio

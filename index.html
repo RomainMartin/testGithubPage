@@ -1,0 +1,26 @@
+---
+layout: default
+page_title: Aär Zo! Rester groüpir!
+---
+<body>
+
+  {% include siteheader.html %}
+
+  <h1> {{ page.page_title }} </h1>
+  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  {% for item in site.portfolio %}
+    <h2> <a href="{{ item.url}}">{{ item.title }}</a></h2>
+  {% endfor %}
+
+  {% for item in site.posts %}
+    {% if forloop.first %}<ul>{% endif %}
+      <li>
+        <h3> <a href="{{ item.url}}">{{ item.title }}</a></h3>
+      </li>
+    {% if forloop.last %}</ul> {% endif %}
+  {% endfor %}
+
+  {% include sitefooter.html %}
+
+</body>
